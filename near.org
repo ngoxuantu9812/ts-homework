@@ -1,0 +1,12 @@
+near call dev-1673061977307-47354421416374 init '{"token_id": "1", "account_id": "bryan98"}' --accountId dev-1673061977307-47354421416374
+near call dev-1673061977307-47354421416374 nft_approve '{"token_id":"2" ,"account_id": "bryan98.testnet"}' --accountId dev-1673061977307-47354421416374
+near view dev-1673061977307-47354421416374 nft_token '{"token_id": 0}'
+near view dev-1673061977307-47354421416374 get_all_tokens
+near view dev-1673061977307-47354421416374 get_all_tokens_by_id 
+
+near call dev-1673061977307-47354421416374 mint_nft '{"token_owner_id": "bryan98abcXX.testnet", "name" : "bryan98","description": "lorem is sum", "media_uri": "https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/177946716_1839052302930462_2540181488203335390_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=e3f864&_nc_ohc=4jwlGPm4KGYAX8djnmM&_nc_ht=scontent.fhan14-1.fna&oh=00_AfCjySLIu1ePY8NmeHoF3asbqIn8sbs7dNhGH9zqr9FC-A&oe=63B894A8", "level":1}' --accountId dev-1673061977307-47354421416374
+
+ near call nft nft_approve '{ "token_id": "1", "account_id": "bob" }' --accountId alice --depositYocto 1
+
+ near call dev-1673061977307-47354421416374 nft_is_approved '{"token_id": "1", "approved_account_id": "bryan98.testnet"}' --accountId dev-1673061977307-47354421416374
+

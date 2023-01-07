@@ -1,0 +1,5 @@
+DEFINE_NEAR_METHOD(get_all_tokens)
+DEFINE_NEAR_METHOD(init)
+DEFINE_NEAR_METHOD(nft_approve)
+DEFINE_NEAR_METHOD(nft_is_approved)
+DEFINE_NEAR_METHOD(nft_token)

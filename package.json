@@ -14,5 +14,7 @@
   "devDependencies": {
     "near-cli": "^3.3.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "near-api-js": "^1.1.0"
+  }
 }

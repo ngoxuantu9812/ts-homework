@@ -10,3 +10,5 @@ near call dev-1673061977307-47354421416374 mint_nft '{"token_owner_id": "bryan98
 
  near call dev-1673061977307-47354421416374 nft_is_approved '{"token_id": "1", "approved_account_id": "bryan98.testnet"}' --accountId dev-1673061977307-47354421416374
 
+ near call dev-1673061977307-47354421416374 nft_approve '{"token_id": "1","account_id": "market","msg": "{\"action\": \"list\", \"price\": \"100\", \"token\": \"nDAI\" }"}' --accountId dev-1673061977307-47354421416374
+

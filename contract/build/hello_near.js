@@ -676,8 +676,8 @@ class LookupMap {
 
 var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _class2;
 class Token {
-  constructor(token_id, account_id) {
-    this.token_id = token_id, this.account_id = account_id, this.owner_id = 'alice.near';
+  constructor(token_id, account_id, msg) {
+    this.token_id = token_id, this.account_id = account_id, this.owner_id = 'alice.near', this.msg = msg;
   }
 }
 let Nft = (_dec = NearBindgen({}), _dec2 = initialize(), _dec3 = call({}), _dec4 = view(), _dec5 = view(), _dec6 = view(), _dec(_class = (_class2 = class Nft {
@@ -696,9 +696,10 @@ let Nft = (_dec = NearBindgen({}), _dec2 = initialize(), _dec3 = call({}), _dec4
   }
   nft_approve({
     token_id,
-    account_id
+    account_id,
+    msg
   }) {
-    let token = new Token(Number(token_id), account_id);
+    let token = new Token(Number(token_id), account_id, msg);
     this.token_by_id.set(token_id.toString(), token);
     return token;
   }

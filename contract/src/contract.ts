@@ -6,10 +6,15 @@ class Token {
   token_id: number;
   account_id: AccountId;
   owner_id: string;
-  constructor(token_id: number, account_id: AccountId) {
+  msg: string;
+  approved_account_ids:  {
+    [approved_account_id: AccountId]: bigint;
+  };
+  constructor(token_id: number, account_id: AccountId, msg: string) {
     this.token_id = token_id,
     this.account_id = account_id,
-    this.owner_id = 'alice.near'
+    this.owner_id = 'alice.near',
+    this.msg = msg
   }
 }
 
@@ -31,8 +36,8 @@ class Nft {
     this.token_by_id = new LookupMap("t");
   }
   @call({})
-  nft_approve({token_id , account_id }: {token_id:string, account_id: string }) {
-    let token = new Token(Number(token_id), account_id);
+  nft_approve({token_id , account_id, msg }: {token_id:string, account_id: string, msg: string }) {
+    let token = new Token(Number(token_id), account_id, msg);
     this.token_by_id.set(token_id.toString(), token);
     return token;
   }
